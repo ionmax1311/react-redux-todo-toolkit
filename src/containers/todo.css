@@ -1,0 +1,14 @@
+.todo {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.todo button {
+  margin-top: 30px;
+  padding: 15px;
+  background: cornflowerblue;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}

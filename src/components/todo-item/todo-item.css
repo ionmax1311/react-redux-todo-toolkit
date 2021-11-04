@@ -1,0 +1,12 @@
+.todo-item li {
+  font-size: 20px;
+  border-bottom: 1px solid #ededed;
+  min-height: 50px;
+  list-style: none;
+  padding-left: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
