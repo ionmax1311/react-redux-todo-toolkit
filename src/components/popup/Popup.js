@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { closePopup } from "../../redux/popup/reducer";
 import { editTodo, setCurrentTodo } from "../../redux/todo/reducer";
@@ -8,25 +8,27 @@ export const Popup = ({
   show,
   onChange,
   setCurTodo,
-  curTodo,
+  value,
   textPopup,
   curId,
 }) => {
   const dispatch = useDispatch();
   const editTodoItem = useSelector((state) => state.todo.todos);
+
+  // const inputRef = React.useRef();
+
+  // console.log("inputRef-----", inputRef);
+
   const handleClosePopup = () => {
     dispatch(closePopup(false));
-    setCurTodo(222);
-    console.log("curTodo---popup", curTodo);
+    // setCurTodo(value);
+    console.log("curTodo---popup", value);
   };
 
-  const handleEditTodo = () => {
+  const sendEditTodo = () => {
     console.log("taskTextPopup", textPopup);
 
     dispatch(closePopup(false));
-    // const newTodos = editTodoItem.map((task) =>
-    //   task.id === curId ? { ...task, text: textPopup } : { ...editTodoItem }
-    // );
 
     const newTodos = editTodoItem.map((task) => {
       if (task.id === curId && textPopup.length > 0) {
@@ -42,7 +44,12 @@ export const Popup = ({
   return (
     <div className={!show ? "popup" : "popup active"}>
       <div className="popup-in">
-        <input type="text" onChange={onChange} defaultValue={curTodo} />
+        <input
+          type="text"
+          onChange={onChange}
+          defaultValue={value}
+          // ref={inputRef}
+        />
         <i onClick={handleClosePopup} className="material-icons popup-close">
           close
         </i>
@@ -52,7 +59,7 @@ export const Popup = ({
         >
           CANCEL
         </button>
-        <button onClick={handleEditTodo}>SEND</button>
+        <button onClick={sendEditTodo}>SEND</button>
       </div>
     </div>
   );

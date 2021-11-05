@@ -1,0 +1,42 @@
+.alert {
+  position: fixed;
+  top: 50px;
+  animation: enter-leave 3s ease-in-out;
+  left: calc(50% - 300px);
+  width: 600px;
+  height: 60px;
+  z-index: 20000;
+}
+
+.alert .success {
+  border: 1px solid teal;
+  background-color: #66cdaa;
+  color: teal;
+}
+
+.alert .error {
+  border: 1px solid tomato;
+  background-color: lightSalmon;
+  color: darkred;
+}
+
+.alert > div {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 18px;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.alert > div > div {
+  width: 100%;
+}
+
+.close-alert {
+  cursor: pointer;
+}
+
+.alert-message {
+  font-size: 18px;
+}

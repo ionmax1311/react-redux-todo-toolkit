@@ -21,6 +21,7 @@ export const TodoList = ({
   setCurTodo,
   taskTextPopup,
   setCurId,
+  handleShowPopup,
 }) => {
   return (
     <div className="todo-list">
@@ -33,6 +34,7 @@ export const TodoList = ({
             setCurTodo={setCurTodo}
             taskTextPopup={taskTextPopup}
             setCurId={setCurId}
+            handleShowPopup={handleShowPopup}
           />
         ))}
       </ul>
