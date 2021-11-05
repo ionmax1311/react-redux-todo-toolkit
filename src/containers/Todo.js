@@ -38,7 +38,7 @@ export const Todo = () => {
     if (taskText.length > 0) {
       dispatch(setTodo(todoItem));
       // dispatch(setTodo({ text: taskText, id: Date.now(), isCompleted: true }));
-
+      setShowAlert(true);
       dispatch(
         setAlert({
           message: "Task added! 🤗",

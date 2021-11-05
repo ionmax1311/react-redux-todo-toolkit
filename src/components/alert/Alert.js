@@ -7,6 +7,7 @@ export const Alert = ({ show, setShowAlert, alerts }) => {
   const [alert, setAlert] = useState({ type: "", message: "" });
   //   const [show, setShow] = useState(false);
   console.log("alerts", alerts);
+  console.log("show", show);
   useEffect(() => {
     if (alerts.length > 0) {
       setAlert(alerts[alerts.length - 1]);

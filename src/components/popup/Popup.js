@@ -21,7 +21,7 @@ export const Popup = ({
 
   const handleClosePopup = () => {
     dispatch(closePopup(false));
-    // setCurTodo(value);
+    setCurTodo(value);
     console.log("curTodo---popup", value);
   };
 

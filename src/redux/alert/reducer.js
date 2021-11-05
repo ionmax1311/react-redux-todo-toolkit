@@ -16,7 +16,6 @@ const alertSlice = createSlice({
         type: action.payload.type,
       });
     },
-    removeAlert: (state, action) => {},
   },
 });
 
